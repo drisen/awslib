@@ -1,5 +1,5 @@
 #
-# Copyright 2020 Dennis Risen, Case Western Reserve University
+# s3chche.py Copyright (C) 2020 Dennis Risen, Case Western Reserve University
 #
 
 from boto3 import resource

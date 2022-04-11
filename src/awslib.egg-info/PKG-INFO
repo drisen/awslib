@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: awslib
 Version: 0.5.0
-Summary: "Misc tools for processing files on AWS"
+Summary: "library for processing files on AWS"
 Home-page: https://github.com/drisen/awslib
 Author: "Dennis Risen"
 Author-email: "dar5@case.edu"
@@ -17,7 +17,7 @@ License-File: LICENSE
 
 # awslib Package
 
-Package of misc tools for processing statistics files collections on AWS S3
+library for processing statistics files collections on AWS S3
 - **PreProcess** class to define a tablename to be processed
 - **listRangeObjects** Generator of S3 objects in bucket with initial prefix, prefix,
     additional subpath inclusively between rangeMin and rangeMax, and file name
