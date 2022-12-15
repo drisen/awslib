@@ -14,7 +14,7 @@ cache creation, explicit expunge,
 - calculate
 See collect/s3Cache
 """
-import gzip
+
 import os
 import os.path as os_path
 import time
@@ -30,6 +30,9 @@ tmp_suffix = '.cache_tmp'
 
 
 class AWSCache:
+    """Access AWS S3 objects through a cache maintained in ~/cache
+
+    """
     config = Config(retries={'max_attempts': 5, 'mode': 'standard'})
     s3 = boto3.resource('s3', config=config)
     # ensure that the cache directory exists
@@ -143,10 +146,19 @@ class AWSCache:
 
     @staticmethod
     def readable(self):
+        """AWSCache instance is always readable
+
+        :param self:
+        :return:
+        """
         return True
 
     @staticmethod
     def seekable(self):
+        """AWSCache instance is not seekable
+        :param self:
+        :return:
+        """
         return False
 
     def __del__(self):
@@ -161,6 +173,11 @@ class AWSCache:
 
     @staticmethod
     def writable(self):
+        """
+        AWSCache instance is not readable
+        :param self:
+        :return:
+        """
         return False
 
     # def readall(self):
@@ -192,8 +209,6 @@ class AWSCache:
 
 if __name__ == '__main__':
     import gzip
-    import json
-    import pickle
     import csv
     cases = ("Stream from AWS through gzip to disk",
              "Buffered read from disk",
