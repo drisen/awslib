@@ -5,7 +5,7 @@ import boto3
 from botocore.config import Config
 import re
 from typing import Union
-from cpiapi import SubTable, find_table, production
+from cpiapi import SubTable, find_table, production  # misc comment here
 
 # re-casting functions
 casters = {'cast:bigint': lambda x: int(x),
