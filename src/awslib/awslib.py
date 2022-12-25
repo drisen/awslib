@@ -1,11 +1,14 @@
 #
 # awslib.py Copyright (C) 2019 Dennis Risen, Case Western Reserve University
 #
+"""
+Library for processing statistics files collections from AWS S3
+"""
 import boto3
 from botocore.config import Config
 import re
 from typing import Union
-from cpiapi import SubTable, find_table, production  # misc comment here
+from cpiapi import SubTable, find_table, production
 
 # re-casting functions
 casters = {'cast:bigint': lambda x: int(x),
@@ -26,6 +29,9 @@ config = Config(retries={'max_attempts': 5, 'mode': 'standard'})
 
 
 class PreProcess:
+    """Pre-processing template for CPI API to be read
+    
+    """
     all = []                            # all of the PreProcess instances
 
     def __init__(self, table_name: str, version: int = None):

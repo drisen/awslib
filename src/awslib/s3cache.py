@@ -1,6 +1,9 @@
 #
-# s3chche.py Copyright (C) 2020 Dennis Risen, Case Western Reserve University
+# s3cache.py Copyright (C) 2020 Dennis Risen, Case Western Reserve University
 #
+"""
+might be an earlier approach to caching
+"""
 
 from boto3 import resource
 from io import BufferedIOBase
@@ -9,7 +12,8 @@ from os import listdir, mkdir, remove, rename, scandir, stat
 from threading import RLock
 from time import time
 """ To Do
-
+Compare with awslib.awsCache, cpiapi.Cache, or caching in wirelessVR
+for cross-pollination of features.
 """
 
 

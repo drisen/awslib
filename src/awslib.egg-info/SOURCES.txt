@@ -1,7 +1,6 @@
 LICENSE
 README.md
 pyproject.toml
-setup.cfg
 src/awslib/__init__.py
 src/awslib/awsCache.py
 src/awslib/awslib.py
@@ -9,4 +8,5 @@ src/awslib/s3cache.py
 src/awslib.egg-info/PKG-INFO
 src/awslib.egg-info/SOURCES.txt
 src/awslib.egg-info/dependency_links.txt
+src/awslib.egg-info/requires.txt
 src/awslib.egg-info/top_level.txt
