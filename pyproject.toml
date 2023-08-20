@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "awslib"
-version = "0.5.5"
+version = "0.5.6"
 authors = [ { name="Dennis Risen", email="dar5@case.edu" }, ]
 description = "Library for processing CPI statistics files from AWS S3"
 readme = "README.md"
